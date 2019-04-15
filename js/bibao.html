@@ -1,0 +1,17 @@
+<!-- 实现一段脚本，使得点击对应链接alert出相应的编号 -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<body>
+  <a href='#'> 第一个链接 </a> </br>
+  <a href='#'> 第二个链接 </a> </br>
+  <a href='#'> 第三个链接 </a> </br>
+  <a href='#'> 第四个链接 </a> </br>
+  <script type="text/javascript">
+    var lis = document.links;
+    for(var i = 0, length = lis.length; i < length; i++) {
+      lis[i].index = i;
+      lis[i].onclick = function() {
+        alert(this.index);
+      };
+    }
+  </script>
+</body>

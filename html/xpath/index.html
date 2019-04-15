@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+
+	<body>
+		<input id="input1" type="text">
+		<input id="input2" type="text">
+		<input id="input3" type="button" value="b1">
+		<input id="input4" type="button" value="b2">
+		<label id="a">ttttttt</label>
+	</body>
+	<script>
+		(function() {
+			function getXpath(obj) {
+				var obj = obj.target || obj.srcElement;
+				var arr = [],
+					iTemp = 0;
+
+				function getTagIndex(tag) {
+					var begin = 0;
+					var firstChild = tag.parentNode.firstChild;
+					while(firstChild) {
+						if(firstChild == tag) return begin == 0 ? "" : "[" + (begin + 1) + "]";
+						if(firstChild.nodeType == 1 && firstChild.tagName == tag.tagName) begin++;
+						firstChild = firstChild.nextSibling
+					}
+					return ""
+				}
+				function getElementName(obj){
+					var name = ":"+ (obj.id || obj.value || "");
+					return name;
+				}
+				var name = getElementName(obj);
+				while(obj) {
+					arr[iTemp++] = obj.nodeName + getTagIndex(obj);
+					if(obj.tagName != "HTML") obj = obj.parentNode;
+					else break
+				}
+				arr[0] += name;
+				console.log(arr.reverse().join('/'))
+		
+				var img = new Image(); // 创建一个image对象,发送数据,跨域相关
+//				img.src = encodeURI() //只能用get方式
+				return arr.reverse()
+			}
+
+			function addEvent(elm, evType, fn, useCapture) {
+				if(elm.addEventListener) {
+					elm.addEventListener(evType, fn, useCapture);
+					return true;
+				} else if(ele.attachEvent) {
+					var r = elm.attachEvent('on' + evType, fn);
+					return r;
+				} else {
+					elm['on', evType] = fn;
+				}
+			}
+			if(document && document['documentElement']) {
+				addEvent(document, "mousedown", getXpath, false);
+			} else {
+				setTimeout(arguments.callee, 16)
+			}
+			if(navigator.connection && navigator.connection.type)
+			document.getElementById("a").innerHTML = navigator.connection.type;
+			else
+			document.getElementById("a").innerHTML = "navigator.connection.type";
+			
+//					if(navigator.connection.type)
+//				alert(navigator.connection.type);
+//				else
+//				alert("navigator.connection.type");
+		})()
+	</script>
+
+</html>

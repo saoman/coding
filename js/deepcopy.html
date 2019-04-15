@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script>
+			function deepCopy(p, c) {
+				var i;
+				c = c || {};
+				for(i in p) {
+					if(p.hasOwnProperty(i)) {
+						if(typeof(p[i]) === "object") {
+							c[i] = Array.isArray(p[i]) ? [] : {};
+							deepCopy(p[i], c[i]);
+						} else {
+							c[i] = p[i];
+						}
+					}
+				}
+				return c;
+			}
+
+			var dad = {
+				count: [1, 2, 3],
+				game: {
+					Inside: true
+				}
+			};
+			var kid = deepCopy(dad);
+		 </script>
+	</head>
+
+	<body>
+
+	</body>
+
+</html>
