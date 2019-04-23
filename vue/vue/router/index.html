@@ -1,0 +1,20 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="index.css">
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+
+	</head>
+	<body>
+		<div id="app">
+			<p>
+				<router-link to="/user/t" exact>/user/t</router-link>
+				<router-link to="/user/t/profile" exact>/user/t/profile</router-link>
+				<router-link to="/user/t/posts" exact>/user/t/posts</router-link>
+			</p>
+			<router-view></router-view>
+		</div>
+		<script src="index.js"></script>
+	</body>
+
+</html>

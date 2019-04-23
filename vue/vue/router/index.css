@@ -1,0 +1,17 @@
+html, body {
+    margin: 5px;
+    padding: 0;
+}
+ /*.router-link-active{
+ 	color: red;
+ }*/
+
+/*.router-link-exact-active{
+	 	color: red;
+
+}*/
+.router-link-active,
+.router-link-exact-active {
+   background-color: indianred;
+   cursor: pointer;
+ }
