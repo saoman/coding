@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        
+        <div id="app" class="tile is-parent">
+            <div class="tile is-child notification is-primary is-6">
+              <p class="subtitle">This is <code>thing</code>:</p>
+              <h1 class="title">{{thing}}</h1>
+              <p>This input has <code>v-model="thing"</code>
+              <input type="text" class="input is-large" v-model="thing">
+            </div>
+            <vue-component class="is-6"></vue-component>
+          </div>
+          
+          <template id="vue-component-template">
+            <div class="tile notification is-child is-info">
+              <p>{{message}}</p>
+              <p>This component has no injected values in it.</p>
+              <nested-component class="card"></nested-component>
+            </div>
+          </template>
+          
+          <template id="vue-nested-component-template">
+            <div>
+              <p>I'm a nested component!</p>
+              <p><code>thing</code> being reactive after injection:</p>
+              <p>{{thing}}</p>
+              <p>We can also set <code>thing</code> from this component</p>
+              <p><input type="text" class="input" v-model="thing"></p>
+            </div>
+          </template>
+
+            
+        <script src="index.js"></script>
+    </body>
+</html>

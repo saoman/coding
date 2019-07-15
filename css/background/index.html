@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+		#wrapper{
+			position: relative;
+			width: 200px;
+			height: 200px;
+		}
+
+
+		.background{
+			background: #999999;
+			position: relative;
+			top: 0;
+			left: 0;
+			z-index: -100;
+		}
+		</style>
+	</head>
+	<body>
+	<div id="wrapper">
+		<div class="background">
+			<p>Background text</p>
+			<img src="http://nuclearpixel.com/content/icons/2010-02-09_stellar_icons_from_space_from_2005/earth_128.png" alt="background" />
+		</div>
+		
+		<uni-page-body class="background">
+			<p>Background text</p>
+			<img src="http://nuclearpixel.com/content/icons/2010-02-09_stellar_icons_from_space_from_2005/earth_128.png" alt="background" />
+		</uni-page-body>
+	</div>
+	</body>
+</html>
+
