@@ -208,7 +208,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// const sayHi = require(\"./a.js\")\r\n// sayHi(\"kaikeba\")\r\n\r\n// debugger\r\n// const Index = () => import('./a.js')\r\n\r\nconst sayHi = () => __webpack_require__.e(/*! import() */ 0).then(__webpack_require__.bind(null, /*! ./a.js */ \"./src/a.js\"))\r\n\r\n// const sayHi = function(){\r\n//     return import('./a.js')\r\n// }\r\n\r\n// const sayHi = import('./a.js')\r\n// debugger\r\n\r\nsayHi.default(\"kaikeba\")\r\n\r\n\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("// 1 require\r\n// const sayHi = require(\"./a.js\")\r\n// sayHi(\"kaikeba\")\r\n\r\n// 2 import from \r\n// import sayHi from('./a.js')\r\n// sayHi(\"kaikeba\")\r\n\r\n// 3 import function\r\n__webpack_require__.e(/*! import() */ 0).then(__webpack_require__.bind(null, /*! ./a.js */ \"./src/a.js\"))\r\n  .then(sayHi => {\r\n    sayHi.default(\"sakdkjk\");\r\n  })\r\n  .catch(error => {\r\n    /* Error handling */\r\n  })\r\n\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ })
 

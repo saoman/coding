@@ -1,17 +1,16 @@
+// 1 require
 // const sayHi = require("./a.js")
 // sayHi("kaikeba")
 
-// debugger
-// const Index = () => import('./a.js')
+// 2 import from 
+// import sayHi from('./a.js')
+// sayHi("kaikeba")
 
-const sayHi = () => import('./a.js')
-
-// const sayHi = function(){
-//     return import('./a.js')
-// }
-
-// const sayHi = import('./a.js')
-// debugger
-
-sayHi.default("kaikeba")
-
+// 3 import function
+import('./a.js')
+  .then(sayHi => {
+    sayHi.default("sakdkjk");
+  })
+  .catch(error => {
+    /* Error handling */
+  })
