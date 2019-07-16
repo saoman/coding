@@ -1,0 +1,14 @@
+{
+  "name": "vue-state-management-alternative",
+  "version": "1.0.0",
+  "description": "Alternative state management for Vue",
+  "scripts": {
+    "start": "vue build src/App.vue",
+	"test": "vue serve 'src/App.vue'",
+    "build": "vue build src/App.vue --prod --config vue-build.config.js"
+  },
+  "devDependencies": {
+    "vue-cli": "^2.8.1"
+  },
+  "license": "MIT"
+}
