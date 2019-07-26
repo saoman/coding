@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 const minimist = require('minimist')
-module.exports = () => {
+
   const args = minimist(process.argv.slice(2))
 
   let cmd = args._[0] || 'help'
@@ -30,4 +30,3 @@ module.exports = () => {
       console.error(`"${cmd}" is not a valid command!`)
       break
   }
-}
