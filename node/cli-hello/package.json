@@ -1,0 +1,19 @@
+{
+  "name": "cli-hello",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "outside": "bin/outside"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "minimist": "^1.2.0"
+  },
+  "devDependencies": {},
+  "keywords": [],
+  "description": ""
+}

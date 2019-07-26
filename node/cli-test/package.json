@@ -1,0 +1,12 @@
+{
+  "name": "cli-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "test123": "./index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

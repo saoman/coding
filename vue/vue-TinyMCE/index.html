@@ -1,0 +1,17 @@
+<html>
+    <head>
+	    <meta charset="UTF-8">
+        <link rel="stylesheet" href="index.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<script src="https://unpkg.com/vuex@3.1.1/dist/vuex.js"></script>
+		<script src="tinymce/tinymce-vue.js"></script>
+    </head>
+    <body>
+        
+    <div id="app" ref="app">
+        {{ name }}
+		<tinymce-editor :init="{plugins: 'wordcount'}"></tinymce-editor>
+    </div>
+        <script src="index.js"></script>
+    </body>
+</html>
