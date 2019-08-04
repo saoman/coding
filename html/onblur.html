@@ -1,0 +1,44 @@
+<html>
+
+<head>
+<title>onblur event example</title>
+
+<script type="text/javascript">
+
+var elem = null;
+
+function initElement()
+ {
+ elem = document.getElementById("foo");
+ // 注意:doEvent() 和 doEvent(param)都是不正确的.这里只能是函数名,不能是函数调用.
+ elem.onblur = doEvent;
+ window.onblur= doWe;
+ };
+function doWe(){
+console.log("dddddd");
+}
+function doEvent()
+ {
+ elem.value = 'Bye-Bye';
+ alert("检测到onblur事件!")
+ }
+</script>
+
+<style type="text/css">
+<!--
+#foo {
+border: solid blue 2px;
+}
+-->
+</style>
+</head>
+
+<body onload="initElement()";>
+<form>
+<input type="text" id="foo" value="Hello!" />
+</form>
+
+<p>点击input元素使其获得焦点,然后点击其他页面其他部位</p>
+
+</body>
+</html>
