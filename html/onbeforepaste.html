@@ -1,0 +1,21 @@
+<html>
+<script type="text/javascript">
+	function test(argument) {
+		console.log(11111)
+		// body...
+	}
+</script>
+<body>
+   <p>Copy and paste some text into the textarea below.</p>
+   <form>
+   <textarea cols="60" 
+             onbeforepaste="test()">
+   </textarea>
+   <input onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\u4e00-\u9fa5]/g,''))" >
+
+
+   </form>
+
+</body>
+
+</html>

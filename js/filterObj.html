@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script>
+		/**
+		 * [过滤对象]
+		 * @param  obj [过滤前数据]
+		 * @param  arr [过滤条件，要求为数组]
+		 */
+		function filterObj(obj, arr) {
+			if (typeof (obj) !== "object" || !Array.isArray(arr)) {
+				throw new Error("参数格式不正确")
+			}
+			const result = {}
+			Object.keys(obj).filter(
+				(key) => arr.includes(key)).forEach((key) => {
+				result[key] = obj[key]
+			})
+			return result
+		}
+		 
+		/**
+		使用
+		**/
+		 
+		let obj = {
+		    a: '1',
+		    b: '2',
+		    c: '3'
+		}
+		 
+		let newObj = filterObj(obj,["a", "b"]);
+	 </script>
+	</head>
+
+	<body>
+		<p>
+			aaa
+		</p>
+	</body>
+
+</html>
